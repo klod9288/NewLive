@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewLive</string>
+    <string name="hello_black_fragment">Hello Blank fragment</string>
+    <string name="user">User :</string>
+    <string name="password">Password :</string>
+    <string name="login">Login</string>
+    <string name="name">Name :</string>
+    <string name="new_register">New Register</string>
+</resources>

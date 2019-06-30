@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterFragment">
+
+    <!--Toolbar-->
+    <include
+        android:id="@+id/toolbarRegister"
+        layout="@layout/toolbar_main"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Wallpaper-->
+        <ImageView
+            android:src="@drawable/wallpaper_blue"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--Content-->
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="@dimen/m1"
+            android:layout_marginRight="@dimen/m1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Name-->
+            <EditText
+                android:id="@+id/edtName"
+                android:background="@drawable/name"
+                android:textSize="@dimen/h4"
+                android:inputType="text"
+                android:hint="@string/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--User-->
+            <EditText
+                android:id="@+id/edtUser"
+                android:background="@drawable/user"
+                android:textSize="@dimen/h4"
+                android:inputType="text"
+                android:hint="@string/user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Password-->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:background="@drawable/password"
+                android:textSize="@dimen/h4"
+                android:hint="@string/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
