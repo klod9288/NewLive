@@ -6,4 +6,7 @@
     <string name="login">Login</string>
     <string name="name">Name :</string>
     <string name="new_register">New Register</string>
+    <string name="title_HaveSpace">มีช่องว่างดูสิ</string>
+    <string name="message_HaveSpace">มันมีช่องว่างดูดีดี</string>
+
 </resources>

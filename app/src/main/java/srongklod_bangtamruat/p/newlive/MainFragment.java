@@ -1,5 +1,7 @@
 package srongklod_bangtamruat.p.newlive;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,6 +18,7 @@ import org.json.JSONObject;
 
 public class MainFragment extends Fragment {
 
+
     public MainFragment() {
 //      Required empty public constructor
     }
@@ -24,92 +27,60 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-//        Register content
-
-        registerContent();
-
 //        LoginController
-        loginController();
+        SignInController();
+
+//        Register Content
+        RegisterContent();
+
 
     }//Main Method
 
-    private void loginController() {
+    private void RegisterContent() {
 
-        Button button = getActivity().findViewById(R.id.btnLogin);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                EditText userEditText = getView().findViewById(R.id.edtUser);
-                EditText passwordEditText = getView().findViewById(R.id.edtPassword);
-
-                String user = userEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
-
-                if (user.isEmpty() || password.isEmpty()) {
-
-
-                } else {
-
-                    try {
-
-                        GetUserWhereUserThead getUserWhereUserThead = new GetUserWhereUserThead(getActivity());
-                        MyConstant myConstant = new MyConstant();
-
-                        getUserWhereUserThead.execute(user,myConstant.toString());
-                        String json = getUserWhereUserThead.get();
-
-
-                        if (json.equals("null")) {
-
-
-                        } else {
-
-                            JSONArray jsonArray = new JSONArray(json);
-                            JSONObject jsonObject = jsonArray.getJSONObject(0);
-
-                            if (password.equals(jsonObject.getString("password"))) {
-
-//                                Password True
-                                getActivity().getSupportFragmentManager().beginTransaction()
-                                        .replace(R.id.contentMainFragment, new RegisterFragment()).commit();
-
-                            } else {
-//                                Password false
-
-
-                            }
-
-                        }
-
-                    } catch (Exception e) {
-
-                        e.printStackTrace();
-                    }
-                }
-
-            }//Method onClick
-        });
-
-    }//Method loginController
-
-    private void registerContent() {
         TextView textView = getView().findViewById(R.id.txtRegister);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.contentMainFragment, new RegisterFragment()).addToBackStack(null).commit();
             }
         });
-    }//Method registerContent
+
+    }
+
+    private void SignInController() {
+
+        Button button = getActivity().findViewById(R.id.btnSignIn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText userEditText = getView().findViewById(R.id.edtUserMain);
+                EditText passwordEditText = getView().findViewById(R.id.edtPasswordMain);
+
+                String user = userEditText.getText().toString().trim();
+                String password = passwordEditText.getText().toString().trim();
+
+                if (user.equals("nameUser")||password.equals("12345")) {
+
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.contentMainFragment,new ToolbarSlide()).addToBackStack(null).commit();
+
+                }
+
+            }
+        });
+
+    }//Method SignIn
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-//      Inflater the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
 }//Main Class

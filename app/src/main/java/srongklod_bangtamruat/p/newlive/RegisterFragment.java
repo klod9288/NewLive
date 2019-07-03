@@ -8,8 +8,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
-public class RegisterFragment extends Fragment {
+public class RegisterFragment extends Fragment  {
+
+
 
     public RegisterFragment(){
         //    Required empty public constructor
@@ -18,24 +22,16 @@ public class RegisterFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-//        Create Toolbar
-        createToolbar();
+
+
 
     }//Main Method
 
-    private void createToolbar() {
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//      Inflate the layout for this fragment
 
-        Toolbar toolbar = getView().findViewById(R.id.toolbarRegister);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getActivity().getSupportFragmentManager().popBackStack();
-
-            }
-        });
-        setHasOptionsMenu(true);
-    }//Method toolbar
-
-
+        return inflater.inflate(R.layout.fragment_register, container, false);
+    }
 }//Main Class

@@ -2,7 +2,9 @@ package srongklod_bangtamruat.p.newlive;
 
 public class MyConstant {
 
-    public String Data;
+
+
+    public String Data ;
     public String user;
     public String password;
 
@@ -18,4 +20,15 @@ public class MyConstant {
         this.password = password;
     }
 
+    public String getData() {
+        return Data;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }//MainClass
