@@ -66,7 +66,7 @@ public class MainFragment extends Fragment {
                 if (user.equals("nameUser")||password.equals("12345")) {
 
                     getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.contentMainFragment,new ToolbarSlide()).addToBackStack(null).commit();
+                            .replace(R.id.contentMainFragment,new ToolbarSlide()).commit();
 
                 }
 
