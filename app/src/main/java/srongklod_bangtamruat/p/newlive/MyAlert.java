@@ -1,8 +1,8 @@
 package srongklod_bangtamruat.p.newlive;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 
 public class MyAlert {
 
@@ -16,6 +16,7 @@ public class MyAlert {
 
 
     public void ThisIsDialog(String title, String message) {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(false);
         builder.setTitle(title);

@@ -8,5 +8,6 @@
     <string name="new_register">New Register</string>
     <string name="title_HaveSpace">มีช่องว่างดูสิ</string>
     <string name="message_HaveSpace">มันมีช่องว่างดูดีดี</string>
+    <string name="title_activity_database_fab">Database_fab</string>
 
 </resources>

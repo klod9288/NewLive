@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +8,7 @@
     tools:context=".RegisterFragment">
 
     <!--Toolbar-->
-    <include
-        android:id="@+id/toolbarRegister"
-        layout="@layout/toolbar_main"/>
+    <include layout="@layout/toolbar_main"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,11 +32,11 @@
 
             <!--Name-->
             <EditText
-                android:id="@+id/edtName"
+                android:id="@+id/edtID"
                 android:background="@drawable/name"
                 android:textSize="@dimen/h4"
                 android:inputType="text"
-                android:hint="@string/name"
+                android:hint="ID :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -57,6 +56,15 @@
                 android:background="@drawable/password"
                 android:textSize="@dimen/h4"
                 android:hint="@string/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:textSize="@dimen/h3"
+                android:textColor="#ffffff"
+                android:text="SAVE"
+                android:background="@drawable/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
