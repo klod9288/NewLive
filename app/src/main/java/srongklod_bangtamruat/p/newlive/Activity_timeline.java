@@ -32,6 +32,7 @@ public class Activity_timeline extends Fragment {
         initialView();
         calcultestring();
         onClick();
+
     }
 
 
@@ -44,6 +45,8 @@ public class Activity_timeline extends Fragment {
 
     }
 
+    
+
     private void onClick() {
 
         ImageButton imageButton = getView().findViewById(R.id.imvSendData);
@@ -53,6 +56,7 @@ public class Activity_timeline extends Fragment {
                 keyString = keyEditText.getText().toString().trim();
                 if (statusABoolean) {
                     getEditText.setText(keyString);
+                    keyEditText.setText("");
                 }
             }
         });
