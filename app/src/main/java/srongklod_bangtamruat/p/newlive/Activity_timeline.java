@@ -9,6 +9,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -16,17 +20,20 @@ import java.util.Calendar;
 
 public class Activity_timeline extends Fragment {
 
-//    private String timeString;
-//    private TextView timeTextView;
-//    private int hourAnInt, minusAnInt;
+    private boolean statusABoolean = true;
+    private EditText keyEditText;
+    private TextView getEditText;
+    private String keyString;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
+        initialView();
+        calcultestring();
+        onClick();
+    }
 
-
-    }//Main Class
 
     @Nullable
     @Override
@@ -37,31 +44,34 @@ public class Activity_timeline extends Fragment {
 
     }
 
-//    private void showTime(int hourAnInt,int minusAnInt) {
-//
-//        timeTextView = getView().findViewById(R.id.txtTime);
-//        timeString = (hourAnInt) + ":" + (minusAnInt);
-//        timeTextView.setText(timeString);
-//
-//    }
-//    private void showTimeDialog() {
-//        TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(),
-//                new TimePickerDialog.OnTimeSetListener() {
-//                    @Override
-//                    public void onTimeSet(TimePicker view, int inthour, int intMinus) {
-//                     showTime(inthour,intMinus);
-//                     setTime();
-//                    }
-//                },hourAnInt,minusAnInt,true);
-//        timePickerDialog.show();
-//    }
-//
-//    private void setTime() {
-//        Calendar calendar = Calendar.getInstance();
-//        hourAnInt = calendar.get(Calendar.HOUR_OF_DAY);
-//        minusAnInt = calendar.get(Calendar.MINUTE);
-//        showTime(hourAnInt,minusAnInt);
-//
-//    }
+    private void onClick() {
+
+        ImageButton imageButton = getView().findViewById(R.id.imvSendData);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                keyString = keyEditText.getText().toString().trim();
+                if (statusABoolean) {
+                    getEditText.setText(keyString);
+                }
+            }
+        });
+    }
+
+    private void calcultestring() {
+        try {
+            keyString = keyEditText.getText().toString().trim();
+            getEditText.setText(keyString);
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    private void initialView() {
+        keyEditText = getView().findViewById(R.id.edtChat);
+        getEditText = getView().findViewById(R.id.txtShowChat);
+
+    }
 
 }//Main Class

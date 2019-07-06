@@ -23,13 +23,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txtTime"
+                    android:lines="4"
+                    android:id="@+id/txtShowChat"
+                    android:hint="00:00"
+                    android:layout_margin="@dimen/m2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="300dp"
-                    android:layout_marginTop="@dimen/m2"
-                    android:layout_marginBottom="@dimen/m2"
-                    android:text="00:00" />
+                    android:layout_height="wrap_content"/>
+
 
             </LinearLayout>
 
@@ -39,36 +39,32 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/m2"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimary"
-                    android:text="วาบ 1" />
 
                 <Button
+                    android:clickable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/m2"
                     android:layout_weight="2"
                     android:background="@color/colorPrimary"
-                    android:text="วาบ 2" />
+                    android:text="วาบ 1" />
 
                 <Button
+                    android:clickable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/m2"
                     android:layout_weight="3"
                     android:background="@color/colorPrimary"
-                    android:text="วาบ 3" />
+                    android:text="วาบ 2" />
 
                 <Button
+                    android:clickable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/m2"
                     android:layout_marginRight="@dimen/m2"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:background="@color/colorPrimary"
                     android:text="วาบ 4" />
 
@@ -79,14 +75,33 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/m2"
-                    android:layout_marginTop="@dimen/m2"
-                    android:layout_marginEnd="@dimen/m2"
-                    android:hint="                                             พิมคุยกัน" />
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:lines="2"
+                    android:inputType="text"
+                    android:id="@+id/edtChat"
+                    android:layout_weight="3"
+                    android:layout_margin="@dimen/m2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="                    พิมพ์คุยกัน" />
+
+                <ImageButton
+                    android:id="@+id/imvSendData"
+                    android:src="@drawable/send"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/m2"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
 
                 <ImageView
                     android:layout_marginTop="@dimen/m1"
