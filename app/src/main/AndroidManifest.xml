@@ -11,12 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Database_fab"
-            android:label="@string/title_activity_database_fab"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ServiceFragment" />
-        <activity android:name=".RegisterFragment" />
+        <activity android:name=".Activity_Registor"></activity>
+        <activity android:name=".Activity_timeline" />
+        <activity android:name=".Activity_Home" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
