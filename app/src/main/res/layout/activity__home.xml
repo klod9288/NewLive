@@ -62,6 +62,8 @@
 
         <!--Login-->
         <Button
+
+            android:clickable="false"
             android:id="@+id/btnSignIn"
             android:textColor="#ffffff"
             android:background="@drawable/button"
@@ -69,15 +71,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!--New Register-->
         <TextView
             android:id="@+id/txtRegister"
-            android:clickable="true"
-            android:textColor="@color/colorAccent"
             android:layout_marginTop="@dimen/m2"
+            android:layout_marginBottom="@dimen/m1"
+            android:clickable="false"
+            android:text="Register"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/h3"
-            android:text="@string/new_register"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -86,6 +89,7 @@
             android:text="Administrator"
             android:textSize="@dimen/h2"
             android:textStyle="bold"
+            android:clickable="false"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/m2"
             android:textColor="@color/colorPrimaryDark"
