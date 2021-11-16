@@ -99,14 +99,30 @@
 
             </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imvUpload"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_margin="@dimen/m2"
-                    android:background="#80ACF3A7"
-                    android:clickable="false"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imvUpload"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/m2"
+                        android:background="#80ACF3A7"
+                        android:clickable="false"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/imvSendImage"
+                        android:src="@drawable/send"
+                        android:layout_margin="@dimen/m2"
+                        android:background="#80ACF3A7"
+                        android:clickable="false"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
 
                 <Spinner
                     android:layout_width="wrap_content"

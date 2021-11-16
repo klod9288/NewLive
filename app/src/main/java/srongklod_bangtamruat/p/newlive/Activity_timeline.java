@@ -3,6 +3,9 @@ package srongklod_bangtamruat.p.newlive;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Interpolator;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,14 +18,19 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.ByteArrayOutputStream;
+import java.sql.DataTruncation;
+
 public class Activity_timeline extends Fragment {
 
     private boolean statusABoolean = true;
     private EditText keyEditText;
     private TextView getEditText;
-    private String keyString;
-    private ImageView imageUpload;
+    private String keyString,ImageString;
+    private ImageView imageUpload, imageSendImage;
     private Uri uri;
+    private Bitmap bitmap;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -32,7 +40,24 @@ public class Activity_timeline extends Fragment {
         calcultestring();
         onClick();
         ImageonClick();
+        imageSendImage();
     }
+
+    private void imageSendImage() {
+        final CharSequence sequence =(String.valueOf(imageUpload));
+        imageSendImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    getEditText.setText(sequence);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+    }//
 
     @Nullable
     @Override
@@ -42,6 +67,8 @@ public class Activity_timeline extends Fragment {
         return view;
 
     }
+
+
 
     private void onClick() {
 
@@ -56,7 +83,9 @@ public class Activity_timeline extends Fragment {
                 }
             }
         });
-    }
+
+    }//onClick
+
 
     private void calcultestring() {
         try {
@@ -72,6 +101,7 @@ public class Activity_timeline extends Fragment {
         keyEditText = getView().findViewById(R.id.edtChat);
         getEditText = getView().findViewById(R.id.txtShowChat);
         imageUpload = getView().findViewById(R.id.imvUpload);
+        imageSendImage = getView().findViewById(R.id.imvSendImage);
 
     }
 
@@ -104,7 +134,6 @@ public class Activity_timeline extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
                 startActivityForResult(Intent.createChooser(intent, "Please Choose Image"), 1);
-
 
             }
         });
