@@ -8,8 +8,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/activity__home.xml" value="0.209375" />
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/activity__registor.xml" value="0.209375" />
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/activity_main2.xml" value="0.209375" />
+        <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/activity_profile.xml" value="0.209375" />
+        <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/activity_timeline.xml" value="0.209375" />
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/admin_activity.xml" value="0.209375" />
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/content_activity.xml" value="0.209375" />
       </map>

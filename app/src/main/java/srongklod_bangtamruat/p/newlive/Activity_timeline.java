@@ -14,6 +14,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -32,6 +33,8 @@ public class Activity_timeline extends Fragment {
     private Uri uri;
     private Bitmap bitmap;
 
+    private Button buttonSwap1,buttonSwap2,buttonSwap3;
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -41,7 +44,8 @@ public class Activity_timeline extends Fragment {
         onClick();
         ImageonClick();
         imageSendImage();
-    }
+        Swap1();
+    }//Main Method
 
     private void imageSendImage() {
         final CharSequence sequence =(String.valueOf(imageUpload));
@@ -102,7 +106,7 @@ public class Activity_timeline extends Fragment {
         getEditText = getView().findViewById(R.id.txtShowChat);
         imageUpload = getView().findViewById(R.id.imvUpload);
         imageSendImage = getView().findViewById(R.id.imvSendImage);
-
+        buttonSwap1 = getView().findViewById(R.id.btn_profile);
     }
 
     @Override
@@ -138,4 +142,16 @@ public class Activity_timeline extends Fragment {
             }
         });
     }
+
+    private void Swap1() {
+        buttonSwap1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.ContentMain, new Profile()).addToBackStack(null).commit();
+            }
+        });
+    }
+
+
 }//Main Class
