@@ -16,11 +16,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:src="@drawable/study" />
+                android:src="@drawable/attack4" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -55,6 +55,7 @@
         </TextView>
 
         <EditText
+            android:inputType="text"
             android:textColorHint="@color/colorPrimary"
             android:hint="........"
             android:gravity="center"
@@ -77,6 +78,7 @@
         </TextView>
 
         <EditText
+            android:inputType="text"
             android:textColorHint="@color/colorPrimary"
             android:gravity="center"
             android:hint="........"
@@ -106,6 +108,7 @@
         </TextView>
 
         <EditText
+            android:inputType="text"
             android:textColorHint="@color/colorPrimaryDark"
             android:hint="........"
             android:layout_marginLeft="10dp"
