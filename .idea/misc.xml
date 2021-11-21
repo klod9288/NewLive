@@ -15,10 +15,18 @@
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/activity_timeline.xml" value="0.209375" />
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/admin_activity.xml" value="0.209375" />
         <entry key="..\:/Users/srongklod/StudioProjects/NewLive/app/src/main/res/layout/content_activity.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout-land/my_game.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw1234dp-small-567x234/my_game.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw600dp/my_game.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/activity__home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.2105978260869565" />
+        <entry key="app/src/main/res/layout/activity_timeline.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/my_game.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

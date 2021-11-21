@@ -33,7 +33,7 @@ public class Activity_timeline extends Fragment {
     private Uri uri;
     private Bitmap bitmap;
 
-    private Button buttonSwap1,buttonSwap2,buttonSwap3;
+    private Button buttonSwap1,btn_my_game,buttonSwap3;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class Activity_timeline extends Fragment {
         ImageonClick();
         imageSendImage();
         Swap1();
+        MyGame();
     }//Main Method
 
     private void imageSendImage() {
@@ -107,6 +108,7 @@ public class Activity_timeline extends Fragment {
         imageUpload = getView().findViewById(R.id.imvUpload);
         imageSendImage = getView().findViewById(R.id.imvSendImage);
         buttonSwap1 = getView().findViewById(R.id.btn_profile);
+        btn_my_game = getView().findViewById(R.id.btn_my_game);
     }
 
     @Override
@@ -151,7 +153,18 @@ public class Activity_timeline extends Fragment {
                         .replace(R.id.ContentMain, new Profile()).addToBackStack(null).commit();
             }
         });
-    }
+    }//Method Swap1
 
+    private void MyGame() {
+        btn_my_game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.ContentMain, new My_Game()).addToBackStack(null).commit();
+            }
+        });
+
+
+    }//Method MyGame
 
 }//Main Class

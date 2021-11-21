@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_weight="1"
+            android:clickable="false"
+            android:src="@drawable/attack_000"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="160dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_weight="1"
+            android:clickable="false"
+            android:src="@drawable/attack_000"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="160dp">
+        </ImageView>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:src="@mipmap/btn_up"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="380dp"
+        android:clickable="false"
+        android:layout_width="40dp"
+        android:layout_height="25dp">
+    </ImageButton>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:src="@mipmap/btn_left"
+            android:layout_marginLeft="60dp"
+            android:clickable="false"
+            android:layout_width="40dp"
+            android:layout_height="25dp">
+        </ImageButton>
+        <ImageButton
+
+            android:src="@mipmap/btn_right"
+            android:layout_marginLeft="30dp"
+            android:clickable="false"
+            android:layout_width="40dp"
+            android:layout_height="25dp">
+        </ImageButton>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:src="@mipmap/btn_down"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:layout_width="40dp"
+        android:layout_height="25dp">
+    </ImageButton>
+
+</LinearLayout>

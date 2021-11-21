@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main2Activity"/>
         <activity android:name=".Activity_Registor" />
         <activity android:name=".Activity_timeline" />
         <activity android:name=".Activity_Home" />
@@ -25,5 +25,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

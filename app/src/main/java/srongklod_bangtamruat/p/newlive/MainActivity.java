@@ -19,19 +19,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-//
-//    private void createTab() {
 
-//        ViewPager viewPager = findViewById(R.id.view_pager);
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        PageTabAdapter pageTabAdapter =
-//                new PageTabAdapter(fragmentManager);
-//
-//        viewPager.setAdapter(pageTabAdapter);
-//        TabLayout tabLayout = findViewById(R.id.tabLayout);
-//        tabLayout.setTabsFromPagerAdapter(pageTabAdapter);
-//        tabLayout.setupWithViewPager(viewPager);
-
-//    }//Method CreateTab
 
 }//Main Class
