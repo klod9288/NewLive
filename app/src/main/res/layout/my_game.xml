@@ -10,9 +10,9 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/imvGame1"
             android:layout_weight="1"
-            android:clickable="false"
-            android:src="@drawable/attack_000"
+            android:drawablePadding="10dp"
             android:layout_margin="10dp"
             android:layout_gravity="center"
             android:layout_width="100dp"
@@ -20,9 +20,8 @@
         </ImageView>
 
         <ImageView
+            android:id="@+id/imvGame2"
             android:layout_weight="1"
-            android:clickable="false"
-            android:src="@drawable/attack_000"
             android:layout_margin="10dp"
             android:layout_gravity="center"
             android:layout_width="100dp"
@@ -62,6 +61,16 @@
             android:layout_width="40dp"
             android:layout_height="25dp">
         </ImageButton>
+
+        <Button
+            android:textSize="@dimen/h2"
+            android:text="Click Picture"
+            android:id="@+id/btn_control_imv2"
+            android:layout_marginLeft="120dp"
+            android:clickable="false"
+            android:layout_width="40dp"
+            android:layout_height="25dp">
+        </Button>
 
     </LinearLayout>
 
