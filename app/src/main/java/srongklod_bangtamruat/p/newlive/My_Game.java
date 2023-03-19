@@ -14,8 +14,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class My_Game extends Fragment {
-    ImageView imageView1,imageView2;
-    Button button;
+
+    private boolean statusABoolean = true;
+    String keyString;
+    ImageView imageView1,imageView2,imageView3;
+    Button button,button2;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -23,15 +26,20 @@ public class My_Game extends Fragment {
 
         IMV();
         ButtonIMV();
+        ButtonIMV2();
 
     }//Method onActivityCreated
 
     private void IMV() {
 
         button = getView().findViewById(R.id.btn_control_imv2);
-        imageView1 = getView().findViewById(R.id.imvGame1);
+        button2 = getView().findViewById(R.id.btn_right);
 
-    }
+        imageView1 = getView().findViewById(R.id.imvGame1);
+        imageView2 = getView().findViewById(R.id.imvGame2);
+        imageView3 = getView().findViewById(R.id.imvGame3);
+
+    }//Method IMV
 
     private void ButtonIMV() {
         button.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +50,8 @@ public class My_Game extends Fragment {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_001);
+                        imageView3.setImageResource(R.drawable.attack_001);
+                        imageView1.setImageDrawable(null);
                     }
                 }, 300);
 
@@ -50,7 +59,7 @@ public class My_Game extends Fragment {
                 handler1.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_002);
+                        imageView3.setImageResource(R.drawable.attack_002);
                     }
                 },400);
 
@@ -58,7 +67,7 @@ public class My_Game extends Fragment {
                 handler2.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_003);
+                        imageView3.setImageResource(R.drawable.attack_003);
                     }
                 },500);
 
@@ -66,7 +75,7 @@ public class My_Game extends Fragment {
                 handler3.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_004);
+                        imageView3.setImageResource(R.drawable.attack_004);
                     }
                 },600);
 
@@ -74,7 +83,7 @@ public class My_Game extends Fragment {
                 handler4.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_005);
+                        imageView3.setImageResource(R.drawable.attack_005);
                     }
                 },700);
 
@@ -82,7 +91,7 @@ public class My_Game extends Fragment {
                 handler5.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_006);
+                        imageView3.setImageResource(R.drawable.attack_006);
                     }
                 },800);
 
@@ -90,7 +99,7 @@ public class My_Game extends Fragment {
                 handler5.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_007);
+                        imageView3.setImageResource(R.drawable.attack_007);
                     }
                 },900);
 
@@ -98,7 +107,7 @@ public class My_Game extends Fragment {
                 handler7.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_008);
+                        imageView3.setImageResource(R.drawable.attack_008);
                     }
                 },1000);
 
@@ -106,14 +115,40 @@ public class My_Game extends Fragment {
                 handler8.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        imageView1.setImageResource(R.drawable.attack_009);
+                        imageView3.setImageResource(R.drawable.attack_009);
+                        imageView3.setImageDrawable(null);
                     }
                 },1100);
 
+                Handler handler9 = new Handler();
+                handler9.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        imageView1.setImageResource(R.drawable.attack_000);
+                    }
+                },1200);
+
+            }
+        });
+    }//Method Btn imvView1
+
+    private void ButtonIMV2() {
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageView2.setImageResource(R.drawable.run_000);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        imageView2.setImageResource(R.drawable.run_001);
+
+                    }
+                }, 300);
             }
         });
     }
-
 
     @Nullable
     @Override

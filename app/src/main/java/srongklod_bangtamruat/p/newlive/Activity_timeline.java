@@ -46,6 +46,7 @@ public class Activity_timeline extends Fragment {
         imageSendImage();
         Swap1();
         MyGame();
+        Swap3();
     }//Main Method
 
     private void imageSendImage() {
@@ -109,6 +110,7 @@ public class Activity_timeline extends Fragment {
         imageSendImage = getView().findViewById(R.id.imvSendImage);
         buttonSwap1 = getView().findViewById(R.id.btn_profile);
         btn_my_game = getView().findViewById(R.id.btn_my_game);
+        buttonSwap3 = getView().findViewById(R.id.btn_painter);
     }
 
     @Override
@@ -164,7 +166,16 @@ public class Activity_timeline extends Fragment {
             }
         });
 
-
     }//Method MyGame
+
+    public void Swap3() {
+        buttonSwap3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.ContentMain,
+                        new Painter()).addToBackStack(null).commit();
+            }
+        });
+    }
 
 }//Main Class
