@@ -11,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity"/>
+        <activity
+            android:name=".Painter"
+            android:exported="false" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".Activity_Registor" />
         <activity android:name=".Activity_timeline" />
         <activity android:name=".Activity_Home" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,4 +29,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

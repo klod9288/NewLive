@@ -1,77 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
-        <ImageView
-            android:layout_weight="1"
-            android:clickable="false"
-            android:src="@drawable/attack_000"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="160dp">
-        </ImageView>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_weight="1"
-            android:clickable="false"
-            android:src="@drawable/attack_000"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="160dp">
-        </ImageView>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/m2"
+                android:src="@drawable/botton_hp" />
 
-    </LinearLayout>
 
-    <ImageButton
-        android:src="@mipmap/btn_up"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="380dp"
-        android:clickable="false"
-        android:layout_width="40dp"
-        android:layout_height="25dp">
-    </ImageButton>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <ImageButton
+            <ImageView
+                android:id="@+id/imvGame1"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"></ImageView>
+
+            <ImageView
+                android:id="@+id/imvGame3"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"></ImageView>
+
+            <ImageView
+                android:id="@+id/imvGame2"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"></ImageView>
+
+        </LinearLayout>
+
+
+        <Button
             android:id="@+id/btn_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
             android:src="@mipmap/btn_left"
-            android:layout_marginLeft="60dp"
-            android:clickable="false"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"></Button>
+
+        <Button
+            android:id="@+id/btn_right"
             android:layout_width="40dp"
-            android:layout_height="25dp">
-        </ImageButton>
-        <ImageButton
-
-            android:src="@mipmap/btn_right"
-            android:layout_marginLeft="30dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
             android:clickable="false"
-            android:layout_width="40dp"
-            android:layout_height="25dp">
-        </ImageButton>
+            android:text="Click Picture"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/btn_left"
+            app:layout_constraintTop_toBottomOf="@+id/button"></Button>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn_control_imv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Click Picture"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.66"
+            app:layout_constraintStart_toEndOf="@+id/btn_right"
+            app:layout_constraintTop_toTopOf="@+id/btn_right"></Button>
 
-    <ImageButton
-        android:src="@mipmap/btn_down"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="5dp"
-        android:clickable="false"
-        android:layout_width="40dp"
-        android:layout_height="25dp">
-    </ImageButton>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="53dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="64dp"
+            android:clickable="false"
+            android:src="@mipmap/btn_down"
+            app:layout_constraintEnd_toStartOf="@+id/btn_right"
+            app:layout_constraintStart_toEndOf="@+id/btn_left"
+            app:layout_constraintTop_toBottomOf="@+id/button"></Button>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="48dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="228dp"
+            android:clickable="false"
+            android:src="@mipmap/btn_up"
+            app:layout_constraintEnd_toStartOf="@+id/btn_right"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toEndOf="@+id/btn_left"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"></Button>
+
+    </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
